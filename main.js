@@ -11,12 +11,15 @@ function addBook(event) {
   const yearInput = document.querySelector("#inputBookYear");
   const isCompleteInput = document.querySelector("#inputBookIsComplete");
 
+  // Mengonversi yearInput ke angka (number)
+  const year = parseInt(yearInput.value, 10);
+
   // Membuat objek buku baru
   const newBook = {
     id: +new Date(),
     title: titleInput.value,
     author: authorInput.value,
-    year: yearInput.value,
+    year: year,
     isComplete: isCompleteInput.checked,
   };
 
